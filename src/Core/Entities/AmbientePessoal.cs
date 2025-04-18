@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Deméter
+namespace Demeter
 {
-    internal class Ambiente_Pessoal: Ambiente
+    internal class AmbientePessoal: Ambiente
     {
-        public Rede_Eletrica RedeEletrica { get; private set; }
+        public RedeEletrica RedeEletrica { get; private set; }
     }
 }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Demeter
 {
-    internal abstract class Ambiente
+    internal class AmbienteProfissional: Ambiente
     {
-        public int Codigo { get; private set; }
-        public string Descricao { get; private set; }
+        public List<RedeEletrica> RedeEletrica { get; private set; }
     }
 }

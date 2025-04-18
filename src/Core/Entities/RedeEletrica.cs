@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Deméter
+namespace Demeter
 {
-    internal class Rede_Eletrica
+    internal class RedeEletrica
     {
         public int Codigo { get; private set; }
         public string Descricao { get; private set; }
