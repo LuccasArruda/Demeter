@@ -29,16 +29,11 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] UsuarioDTO dto)
+        public IActionResult Post([FromBody] UsuarioDTO dto)
         {
-            var novoUsuario = new Usuario
-            {
-                Nome = dto.Nome,
-                Email = dto.Email
-            };
-
-            var criado = await _usuarioService.CriarAsync(novoUsuario);
-            return CreatedAtAction(nameof(GetById), new { id = criado.Id }, criado);
+            var novo = new Usuario(dto.Nome, dto.Email, dto.Telefone, dto.Senha);
+            _usuarios.Add(novo);
+            return CreatedAtAction(nameof(GetById), new { id = novo.Codigo }, novo);
         }
 
         [HttpDelete("{id}")]
